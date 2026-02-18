@@ -7,14 +7,20 @@ import NewsLetter from "../components/NewsLetter";
 import FeaturedProduct from "../components/FeaturedProduct";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Testprodcard from "@/components/Testprodcard";
+import Link from "next/link";
 
 const Home = () => {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div className="px-6 md:px-16 lg:px-32">
         <HeaderSlider />
-        <HomeProducts />
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 flex-col items-center gap-6 mt-12 pb-14 w-full">
+          <Link href="/testlistpod"><Testprodcard/></Link>
+          <Testprodcard/>
+          <Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/>
+        </div>
         <FeaturedProduct />
         <Banner />
         <NewsLetter />

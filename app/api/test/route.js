@@ -2,35 +2,13 @@ import { NextResponse } from 'next/server';
 import { prisma } from '../../../lib/prisma';
 
 export async function POST(request) {
+  if (!prisma) {
+    return NextResponse.json(
+      { success: false, message: 'Database not configured. Set DATABASE_URL in .env or .env.local.' },
+      { status: 503 }
+    );
+  }
   try {
-    // Check if DATABASE_URL is available
-    const databaseUrl = process.env.DATABASE_URL;
-    
-    if (!databaseUrl) {
-      console.error('DATABASE_URL is not set in environment variables');
-      console.error('Available env vars:', Object.keys(process.env).filter(k => k.includes('DATABASE')));
-      return NextResponse.json(
-        { 
-          success: false, 
-          message: 'Database configuration error. DATABASE_URL is not set. Please check your .env.local file.' 
-        },
-        { status: 500 }
-      );
-    }
-    
-    console.log('DATABASE_URL is set:', databaseUrl ? 'Yes (hidden)' : 'No');
-
-    // Validate prisma client is available
-    if (!prisma || typeof prisma.user === 'undefined') {
-      console.error('Prisma client is not initialized or User model not available');
-      return NextResponse.json(
-        { 
-          success: false, 
-          message: 'Database client not initialized. Please restart the server.' 
-        },
-        { status: 500 }
-      );
-    }
 
     let body;
     try {

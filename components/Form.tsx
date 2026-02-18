@@ -1,8 +1,13 @@
 'use client'
+
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 
-export default function Form() {
+interface Props {
+    price:number
+}
+
+export default function Form(props:Props) {
     const [formData, setFormData] = useState({
         uid: '',
         name: '',
@@ -12,7 +17,7 @@ export default function Form() {
     const [loading, setLoading] = useState(false);
     const [uploading, setUploading] = useState(false);
     const [previewImage, setPreviewImage] = useState(null);
-    const [image,setImage]=useState("/uc.png")
+    const [image,setImage]=useState("/khaltiss.jpeg")
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -224,16 +229,16 @@ export default function Form() {
                         </div>
                         <div>
                             <div className='flex space-x-8'>
-                                <h1>pay with</h1>
-                                <button onClick={()=>setImage("/profile.png")}>Khalti</button>
+                                <h1>pay {props.price}</h1>
+                                <button onClick={()=>setImage("/khaltiss.jpeg")}>Khalti</button>
                                 <button onClick={()=>setImage("/uc.png")}>eSewa</button>
                             </div>
 
-                            <img src={image}></img>
+                            <img src={image} className="h-60"></img>
                         </div>
                         <div>
                             <label htmlFor="image" className="block text-sm font-medium text-gray-700">
-                                Profile Image
+                                Upload Screenshot Of Payment
                             </label>
                             <div className="mt-1">
                                 <input

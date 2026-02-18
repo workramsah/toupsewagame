@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:migrate": "node -e \"require('dotenv').config(); require('dotenv').config({path:'.env.local'}); require('child_process').execSync('npx prisma migrate deploy',{stdio:'inherit',env:process.env})\""
   },
   "dependencies": {
     "@prisma/client": "^6.19.2",
