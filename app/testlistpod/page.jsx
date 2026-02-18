@@ -80,9 +80,9 @@ const Page = () => {
                         Note: Ensure that the details are correct, no refunds would be given if the details are wrong
                     </p>
                     <p className="text-3xl font-medium mt-6">
-                        $600
+                        New
                         <span className="text-base font-normal text-gray-800/60 line-through ml-2">
-                            $500
+                            Old
                         </span>
                     </p>
                     <hr className="bg-gray-600 my-6" />
