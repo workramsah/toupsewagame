@@ -6,27 +6,27 @@ const HeaderSlider = () => {
   const sliderData = [
     {
       id: 1,
-      title: " rradfdfExperience Pure Sound - Your Perfect Headphones Awaits!",
+      title: "Freefire TopUP",
       offer: "Limited Time Offer 30% Off",
       buttonText1: "Buy now",
       buttonText2: "Find more",
-      imgSrc: "Khalti.jpg",
+      imgSrc: "freefireimage.jpeg",
     },
     {
       id: 2,
-      title: "Next-Level Gaming Starts Here - Discover PlayStation 5 Today!",
+      title: "PUBG TopUP",
       offer: "Hurry up only few lefts!",
       buttonText1: "Shop Now",
       buttonText2: "Explore Deals",
-      imgSrc: "Khalti.jpg",
+      imgSrc: "pubgs.avif",
     },
     {
       id: 3,
-      title: "Power Meets Elegance - Apple MacBook Pro is Here for you!",
+      title: "Clash of Clan TopUP",
       offer: "Exclusive Deal 40% Off",
       buttonText1: "Order Now",
       buttonText2: "Learn More",
-      imgSrc: "Khalti.jpg",
+      imgSrc: "clan.webp",
     },
   ];
 

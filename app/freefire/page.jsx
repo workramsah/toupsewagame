@@ -73,11 +73,7 @@ const Page = () => {
 
                         Need to top up Free Fire diamonds in Nepal quickly? Follow these simple steps to get your diamonds instantly! Just enter your Free Fire Player ID, choose the diamond amount, complete the payment, and your diamonds will be added to your Free Fire account immediately. Enjoy hassle-free payments through popular Nepali methods like Khalti, eSewa, IMEPay, MyPay, and others.
 
-                        All prices are listed in NPR/NRS (Nepalese Rupee), making the process smooth and convenient for players in Nepal. Whether you're upgrading your character, purchasing in-game items, or enhancing your Free Fire experience, our fast top-up service has you covered.
-
-                        Start topping up today with the best diamond top-up service in Nepal and power up your Free Fire gameplay instantly!
-
-                        Note: Ensure that the details are correct, no refunds would be given if the details are wrong
+                        All prices are listed in NPR/NRS (Nepalese Rupee), 
                     </p>
                     <p className="text-3xl font-medium mt-6">
                         New
@@ -98,59 +94,71 @@ const Page = () => {
                 <div>
                     This is section for the package selector
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-                        <div onClick={() => setPrice(49)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
-                            <div className="flex justify-between px-2" >
-                                <h1>25 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
-                            </div>
-                            <h1 className="px-2">Rs 49</h1>
-                        </div>
-                        <div onClick={() => setPrice(95)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
-                            <div className="flex justify-between px-2" >
-                                <h1>50 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
-                            </div>
-                            <h1 className="px-2">Rs 95</h1>
-                        </div>
-                        <div onClick={() => setPrice(139)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                        <div onClick={() => setPrice(99)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
                             <div className="flex justify-between px-2" >
                                 <h1>115 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
                             </div>
-                            <h1 className="px-2">Rs 139</h1>
+                            <h1 className="px-2">Rs 99</h1>
                         </div>
-                        <div onClick={() => setPrice(289)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                        <div onClick={() => setPrice(199)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
                             <div className="flex justify-between px-2" >
                                 <h1>240 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
                             </div>
-                            <h1 className="px-2">Rs 289</h1>
+                            <h1 className="px-2">Rs 199</h1>
                         </div>
-                        <div onClick={() => setPrice(699)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                        <div onClick={() => setPrice(315)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
                             <div className="flex justify-between px-2" >
-                                <h1>610 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
+                                <h1>380 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
                             </div>
-                            <h1 className="px-2">Rs 699</h1>
+                            <h1 className="px-2">Rs 315</h1>
                         </div>
-                        <div onClick={() => setPrice(1399)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                        <div onClick={() => setPrice(435)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                            <div className="flex justify-between px-2" >
+                                <h1>505 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
+                            </div>
+                            <h1 className="px-2">Rs 435</h1>
+                        </div>
+                        <div onClick={() => setPrice(540)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                            <div className="flex justify-between px-2" >
+                                <h1>660 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
+                            </div>
+                            <h1 className="px-2">Rs 540</h1>
+                        </div>
+                        <div onClick={() => setPrice(999)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                            <div className="flex justify-between px-2" >
+                                <h1>1090 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
+                            </div>
+                            <h1 className="px-2">Rs 999</h1>
+                        </div>
+                        <div onClick={() => setPrice(1050)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
                             <div className="flex justify-between px-2" >
                                 <h1>1240 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
                             </div>
-                            <h1 className="px-2">Rs 1399</h1>
+                            <h1 className="px-2">Rs 1050</h1>
                         </div>
-                        <div onClick={() => setPrice(289)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                        <div onClick={() => setPrice(1760)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
                             <div className="flex justify-between px-2" >
-                                <h1>Weekly Membership</h1> <img src="/uc.png" className="w-5 h-5"></img>
+                                <h1>2090 Diamonds</h1> <img src="/uc.png" className="w-5 h-5"></img>
                             </div>
-                            <h1 className="px-2">Rs 289</h1>
+                            <h1 className="px-2">Rs 1760</h1>
                         </div>
-                        <div onClick={() => setPrice(1349)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                        <div onClick={() => setPrice(205)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
                             <div className="flex justify-between px-2" >
-                                <h1>Monthly Membership</h1> <img src="/uc.png" className="w-5 h-5"></img>
+                                <h1>Weekly </h1> <img src="/uc.png" className="w-5 h-5"></img>
                             </div>
-                            <h1 className="px-2">Rs 1349</h1>
+                            <h1 className="px-2">Rs 205</h1>
                         </div>
-                        <div onClick={() => setPrice(95)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                        <div onClick={() => setPrice(950)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
                             <div className="flex justify-between px-2" >
-                                <h1>Weekly Lite</h1> <img src="/uc.png" className="w-5 h-5"></img>
+                                <h1>Monthly </h1> <img src="/uc.png" className="w-5 h-5"></img>
                             </div>
-                            <h1 className="px-2">Rs 95</h1>
+                            <h1 className="px-2">Rs 950</h1>
+                        </div>
+                        <div onClick={() => setPrice(1,150)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                            <div className="flex justify-between px-2" >
+                                <h1>Weekly+Monthly</h1> <img src="/uc.png" className="w-5 h-5"></img>
+                            </div>
+                            <h1 className="px-2">Rs 1,150</h1>
                         </div>
 
                     </div>

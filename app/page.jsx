@@ -20,7 +20,7 @@ const Home = () => {
           <Link href="/testlistpod"><Testprodcard name="Free Fire" price="Rs 25-1200" description="This is freefire topup" image="freefireimage.jpeg"/></Link>
           <Link href="/topup/pubg"><Testprodcard name="PUBG" price="Rs 25-1200+" description="This is pubg topup" image="pubgs.avif"/></Link>
           
-          <Testprodcard image="Khalti.jpg"/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/>
+        
         </div>
         {/* <FeaturedProduct /> */}
         {/* <Banner /> */}
