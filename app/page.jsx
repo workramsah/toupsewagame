@@ -22,8 +22,8 @@ const Home = () => {
           
           <Testprodcard image="Khalti.jpg"/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/><Testprodcard/>
         </div>
-        <FeaturedProduct />
-        <Banner />
+        {/* <FeaturedProduct /> */}
+        {/* <Banner /> */}
         <NewsLetter />
       </div>
       <Footer />
