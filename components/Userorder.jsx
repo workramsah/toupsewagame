@@ -62,13 +62,14 @@ export default function Userorder() {
             <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">ID</th>
             <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">UID</th>
             <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Name</th>
+            <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Price (NPR)</th>
             <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase">Status</th>
           </tr>
         </thead>
         <tbody>
           {users.length === 0 ? (
             <tr>
-              <td colSpan={4} className="px-4 py-8 text-center text-gray-500 text-sm">
+              <td colSpan={5} className="px-4 py-8 text-center text-gray-500 text-sm">
                 No orders yet
               </td>
             </tr>
@@ -78,6 +79,7 @@ export default function Userorder() {
                 <td className="px-4 py-3 text-sm">{user.id}</td>
                 <td className="px-4 py-3 text-sm">{user.uid}</td>
                 <td className="px-4 py-3 text-sm">{user.name}</td>
+                <td className="px-4 py-3 text-sm tabular-nums">Rs {user.price ?? '—'}</td>
                 <td className="px-4 py-3 text-sm">
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
                     {STATUS_LABELS[user.status] ?? user.status ?? 'Pending'}

@@ -1,19 +1,24 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 
 interface Props {
-    price:number
+    price: number;
 }
 
-export default function Form(props:Props) {
+export default function Form(props: Props) {
     const [formData, setFormData] = useState({
         uid: '',
         name: '',
         whatsappnum: '',
-        imageUrl: ''
+        imageUrl: '',
+        price: props.price,
     });
+
+    useEffect(() => {
+        setFormData((prev) => ({ ...prev, price: props.price }));
+    }, [props.price]);
     const [loading, setLoading] = useState(false);
     const [uploading, setUploading] = useState(false);
     const [previewImage, setPreviewImage] = useState(null);
@@ -82,7 +87,7 @@ export default function Form(props:Props) {
             try {
                 uploadData = await uploadResponse.json();
             } catch (parseError) {
-                console.error('Failed to parse upload response:', parseError);
+                console.warn('Failed to parse upload response:', parseError);
                 toast.error('Invalid response from upload server');
                 setPreviewImage(null);
                 return;
@@ -99,7 +104,7 @@ export default function Form(props:Props) {
                 setPreviewImage(null);
             }
         } catch (error) {
-            console.error('Upload error:', error);
+            console.warn('Upload error:', error);
             toast.error('Failed to upload image. Please try again.');
             setPreviewImage(null);
         } finally {
@@ -117,7 +122,10 @@ export default function Form(props:Props) {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    price: Number(formData.price),
+                }),
             });
 
             // Check if response is ok
@@ -135,7 +143,7 @@ export default function Form(props:Props) {
                 }
 
                 const errorMessage = errorData.message || errorData.error || `Request failed with status ${response.status}`;
-                console.error('API Error:', {
+                console.warn('API Error:', {
                     status: response.status,
                     statusText: response.statusText,
                     data: errorData
@@ -149,7 +157,7 @@ export default function Form(props:Props) {
             try {
                 data = await response.json();
             } catch (parseError) {
-                console.error('Failed to parse response:', parseError);
+                console.warn('Failed to parse response:', parseError);
                 toast.error('Invalid response from server');
                 return;
             }
@@ -160,16 +168,17 @@ export default function Form(props:Props) {
                     uid: '',
                     name: '',
                     whatsappnum: '',
-                    imageUrl: ''
+                    imageUrl: '',
+                    price: props.price,
                 });
                 setPreviewImage(null);
             } else {
                 const errorMessage = data.message || data.error || 'Failed to create user';
-                console.error('API Error:', data);
+                console.warn('API Error:', data);
                 toast.error(errorMessage);
             }
         } catch (error) {
-            console.error('Network Error:', error);
+            console.warn('Network Error:', error);
             toast.error('Network error. Please check your connection and try again.');
         } finally {
             setLoading(false);

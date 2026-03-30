@@ -13,6 +13,7 @@ interface User {
   id: number;
   uid: string;
   name: string;
+  price: number;
   whatsappnum: string;
   imageUrl: string | null;
   status?: string;
@@ -97,6 +98,7 @@ export default function Page() {
     setEditForm({
       uid: user.uid,
       name: user.name,
+      price: user.price,
       whatsappnum: user.whatsappnum,
       imageUrl: user.imageUrl || '',
     });
@@ -189,6 +191,7 @@ export default function Page() {
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">ID</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">UID</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Name</th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Price (NPR)</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">WhatsApp</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Image</th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
@@ -200,7 +203,7 @@ export default function Page() {
             <tbody>
             {users.length === 0 ? (
               <tr>
-                <td colSpan={9} className="px-4 py-12 text-center text-gray-500">
+                <td colSpan={10} className="px-4 py-12 text-center text-gray-500">
                   No users found. Add users via the form below or your API.
                 </td>
               </tr>
@@ -230,6 +233,24 @@ export default function Page() {
                       />
                     ) : (
                       user.name
+                    )}
+                  </td>
+                  <td className="px-4 py-3 border-b">
+                    {editingId === user.id ? (
+                      <input
+                        type="number"
+                        min={0}
+                        value={editForm.price ?? ''}
+                        onChange={(e) =>
+                          setEditForm({
+                            ...editForm,
+                            price: e.target.value === '' ? undefined : Number(e.target.value),
+                          })
+                        }
+                        className="w-full min-w-[5rem] px-2 py-1 border rounded"
+                      />
+                    ) : (
+                      <span className="tabular-nums">Rs {user.price ?? '—'}</span>
                     )}
                   </td>
                   <td className="px-4 py-3 border-b">

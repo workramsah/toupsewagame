@@ -76,9 +76,9 @@ const Page = () => {
                         All prices are listed in NPR/NRS (Nepalese Rupee), 
                     </p>
                     <p className="text-3xl font-medium mt-6">
-                        New
-                        <span className="text-base font-normal text-gray-800/60 line-through ml-2">
-                            Old
+                        Rs {price}
+                        <span className="text-base font-normal text-gray-800/60 ml-2">
+                            (selected package)
                         </span>
                     </p>
                     <hr className="bg-gray-600 my-6" />
@@ -154,7 +154,7 @@ const Page = () => {
                             </div>
                             <h1 className="px-2">Rs 950</h1>
                         </div>
-                        <div onClick={() => setPrice(1,150)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
+                        <div onClick={() => setPrice(1150)} className="bg-orange-400 w-44 h-16 flex flex-col justify-center rounded-lg hover:ring-2 ">
                             <div className="flex justify-between px-2" >
                                 <h1>Weekly+Monthly</h1> <img src="/uc.png" className="w-5 h-5"></img>
                             </div>
